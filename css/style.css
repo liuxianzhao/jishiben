@@ -1,0 +1,58 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+.clearfix:after{
+    content: "";
+    display: table;
+    clear: both;
+}
+header{
+	margin-top: 20px;
+	text-align: center;
+}
+header .logo{
+	padding: 0px 20px;
+	display: inline-block;
+	font-weight: 700;
+	background: #fff;
+}
+header .xian{
+	border-bottom: 1px solid black;
+	margin-top: -14px;
+}
+.main{
+	margin-top: 30px;
+	text-align: left;
+	padding-bottom: 20px;
+	border-bottom: 1px solid black;
+	margin-bottom: 10px;
+}
+.main .shijian,.tianjia .shijian{
+	color: #abafb2;
+}
+.main .text input.nei{
+	border: none;
+	width: 100%;
+	outline: none;
+}
+.main .text input.biao{
+	border: none;
+	width: 100%;
+	outline: none;
+	font-size: 24px;
+	font-weight: 700;
+}
+.main .anniu button{
+	color: #6f5bb0;
+	border: 2px solid #7d6fa0;
+	background: #fff;
+	font-weight: 700;
+	padding: 13px 27px;
+	border-radius: 7px;
+}
+.tianjia>div{
+	border-bottom: 1px solid black;
+	margin: 20px 0px;
+}

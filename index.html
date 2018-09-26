@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Document</title>
+		<link href="https://cdn.bootcss.com/bootstrap/4.1.1/css/bootstrap.css" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="css/style.css"/>
+	</head>
+	<body>
+		<div class="container" id="app">
+			<header>
+				<div class="logo">
+					<img src="img/logo.png" alt="" />
+					      Notes App _ Vue.js
+				</div>
+				<div class="xian"></div>
+			</header>
+			<div class="main">
+				<div class="row">
+					<div class="col-md-2 shijian">
+						<p class="shi">{{shijian}}</p>
+					</div>
+					<div class="col-md-8 text">
+						<input type="text" v-model="biaoti" class="biao"/>
+						<input type="text" v-model="aa1" class="nei" @keydown="fun3"/>
+						<p>{{shuzi}}字</p>
+					</div>
+					<div class="col-md-2 anniu">
+						<button @click="fun">添加笔记</button>
+					</div>
+				</div>
+			</div>
+			<div class="tianjia">
+				<div class="row" v-for="(ne,index) in nei">
+					<div class="col-md-2 time">
+						<p>{{ne.time}}</p>
+						<p>{{ne.xiugai}}</p>
+					</div>
+					<div class="col-md-8">
+						<h3>{{ne.biao}}</h3>
+						<textarea name="" rows="7" cols="70" @keydown="fun2(index)" v-model="ne.name"></textarea>
+						<p>{{ne.shu}}字</p>
+					</div>
+					<div class="col-md-2">
+						<button @click="fun1(index)">删除</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+		<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.js"></script>
+		<script src="https://cdn.bootcss.com/bootstrap/4.1.1/js/bootstrap.js"></script>
+		<script src="https://cdn.bootcss.com/vue/2.5.16/vue.js"></script>
+		<script src="https://cdn.bootcss.com/vue-resource/1.5.1/vue-resource.js"></script>
+		<script src="js/script.js"></script>
+	</body>
+</html>
